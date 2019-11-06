@@ -85,6 +85,20 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'First Title',
+    date: 'Nov 4 2019',
+    firstParagraph: 'This is a first Paragraph',
+    secondParagraph: 'This is a second Paragraph',
+    thirdParagraph: 'This is a third Paragraph'
+  },
+  {
+    title: 'Second Title',
+    date: 'Nov 5 2019',
+    firstParagraph: 'Lorem ipsum dolor sit amet.',
+    secondParagraph: 'Lorem ipsum dolor sit amet.',
+    thirdParagraph: 'Lorem ipsum dolor sit amet.'
   }
 ];
 
