@@ -140,7 +140,7 @@ function createComponent(articleInfo) {
   firstParagraph.textContent = articleInfo.firstParagraph;
   secondParagraph.textContent = articleInfo.secondParagraph;
   thirdParagraph.textContent = articleInfo.thirdParagraph;
-  expandButton.textContent = 'Expand';
+  expandButton.textContent = 'Read More';
 
   // Add Classes
 
