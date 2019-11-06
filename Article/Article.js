@@ -115,7 +115,7 @@ const data = [
 
 
 function createComponent(articleInfo) {
-  // properties of title, date, firstParagrpah, secondParagraph, thirdParagraph
+  
   const article = document.createElement('div');
   const articleTitle = document.createElement('h2');
   const articleDate = document.createElement('p');
@@ -125,7 +125,7 @@ function createComponent(articleInfo) {
   const expandButton = document.createElement('span');
 
 
-  //append to DOM
+  
 
   article.appendChild(articleTitle);
   article.appendChild(articleDate);
@@ -134,7 +134,7 @@ function createComponent(articleInfo) {
   article.appendChild(thirdParagraph);
   article.appendChild(expandButton);
 
-  // Set Content
+  
   articleTitle.textContent = articleInfo.title;
   articleDate.textContent = articleInfo.date;
   firstParagraph.textContent = articleInfo.firstParagraph;
@@ -142,13 +142,13 @@ function createComponent(articleInfo) {
   thirdParagraph.textContent = articleInfo.thirdParagraph;
   expandButton.textContent = 'Read More';
 
-  // Add Classes
+  
 
   article.classList.add('article');
   articleDate.classList.add('date');
   expandButton.classList.add('expandButton');
 
-  // event handler for button
+  
 
   expandButton.addEventListener("click", () => {
     article.classList.toggle('article-open');
@@ -156,8 +156,7 @@ function createComponent(articleInfo) {
   });
   return article;
 }
-
-//ForEach to go over each item. 
+ 
 const articles = document.querySelector('.articles');
 
 data.forEach(data => {
