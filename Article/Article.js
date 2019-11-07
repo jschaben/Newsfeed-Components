@@ -166,8 +166,13 @@ function createComponent(articleInfo) {
 
   expandButton.addEventListener("click", () => {
     article.classList.toggle('article-open');
-    expandButton.textContent = 'Close';
+    if (expandButton.innerText === 'Read More') {
+      expandButton.textContent = 'Read Less';
+    } else{
+      expandButton.textContent = 'Read More';
+    }
   });
+
   return article;
 }
  
