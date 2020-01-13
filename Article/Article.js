@@ -85,6 +85,20 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'First Title',
+    date: 'Nov 4 2019',
+    firstParagraph: 'This is a first Paragraph',
+    secondParagraph: 'This is a second Paragraph',
+    thirdParagraph: 'This is a third Paragraph'
+  },
+  {
+    title: 'Second Title',
+    date: 'Nov 5 2019',
+    firstParagraph: 'Lorem ipsum dolor sit amet.',
+    secondParagraph: 'Lorem ipsum dolor sit amet.',
+    thirdParagraph: 'Lorem ipsum dolor sit amet.'
   }
 ];
 
@@ -112,3 +126,58 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+
+
+function createComponent(articleInfo) {
+  
+  const article = document.createElement('div');
+  const articleTitle = document.createElement('h2');
+  const articleDate = document.createElement('p');
+  const firstParagraph = document.createElement('p');
+  const secondParagraph = document.createElement('p');
+  const thirdParagraph = document.createElement('p');
+  const expandButton = document.createElement('span');
+
+
+  
+
+  article.appendChild(articleTitle);
+  article.appendChild(articleDate);
+  article.appendChild(firstParagraph);
+  article.appendChild(secondParagraph);
+  article.appendChild(thirdParagraph);
+  article.appendChild(expandButton);
+
+  
+  articleTitle.textContent = articleInfo.title;
+  articleDate.textContent = articleInfo.date;
+  firstParagraph.textContent = articleInfo.firstParagraph;
+  secondParagraph.textContent = articleInfo.secondParagraph;
+  thirdParagraph.textContent = articleInfo.thirdParagraph;
+  expandButton.textContent = 'Read More';
+
+  
+
+  article.classList.add('article');
+  articleDate.classList.add('date');
+  expandButton.classList.add('expandButton');
+
+  
+
+  expandButton.addEventListener("click", () => {
+    article.classList.toggle('article-open');
+    if (expandButton.innerText === 'Read More') {
+      expandButton.textContent = 'Read Less';
+    } else{
+      expandButton.textContent = 'Read More';
+    }
+  });
+
+  return article;
+}
+ 
+const articles = document.querySelector('.articles');
+
+data.forEach(data => {
+  articles.appendChild(createComponent(data));
+});
